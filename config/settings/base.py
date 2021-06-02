@@ -42,7 +42,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres://localhost/djangogram"),
+    "default": env.db("DATABASE_URL", default="postgres://postgres:admin@localhost:5432/djangogram"),# 아이디 비번 포트 변경
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
